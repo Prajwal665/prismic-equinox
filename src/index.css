@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-900: #0a1128;
+  --color-navy-800: #001f54;
+  --color-police: #001f54;
+  --color-emergency: #d80032;
+}
+
+@layer base {
+  body {
+    @apply bg-navy-900 text-white font-sans;
+  }
+}
+
+.glass-panel {
+  @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-xl;
+}
+
+.emergency-alert {
+  @apply bg-emergency/20 border-l-4 border-emergency animate-pulse;
+}
