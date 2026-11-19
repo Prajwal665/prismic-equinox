@@ -17,6 +17,65 @@
   @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-xl;
 }
 
+.glass-panel-control {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(10, 25, 60, 0.4) 100%);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-panel-glow-cyan {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.08) 0%, rgba(10, 17, 40, 0.85) 100%);
+  border: 1px solid rgba(6, 182, 212, 0.25);
+  box-shadow: 0 0 25px rgba(6, 182, 212, 0.12);
+}
+
+.glass-panel-glow-emerald {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(10, 17, 40, 0.85) 100%);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  box-shadow: 0 0 25px rgba(16, 185, 129, 0.12);
+}
+
+.glass-panel-glow-red {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(10, 17, 40, 0.85) 100%);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  box-shadow: 0 0 25px rgba(239, 68, 68, 0.18);
+}
+
+.glass-panel-glow-amber {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, rgba(10, 17, 40, 0.85) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  box-shadow: 0 0 25px rgba(245, 158, 11, 0.12);
+}
+
+.glass-panel-glow-purple {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.08) 0%, rgba(10, 17, 40, 0.85) 100%);
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.12);
+}
+
 .emergency-alert {
   @apply bg-emergency/20 border-l-4 border-emergency animate-pulse;
+}
+
+.map-tiles-dark {
+  filter: brightness(0.6) invert(1) contrast(2) hue-rotate(205deg) saturate(0.25) brightness(0.85);
+}
+
+@keyframes radar-sweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-radar {
+  animation: radar-sweep 4s linear infinite;
+}
+
+@keyframes beacon-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.15); }
+}
+
+.animate-beacon {
+  animation: beacon-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }

@@ -1,0 +1,29 @@
+{
+  "appId": "in.gov.itms.officer",
+  "appName": "ITMS Officer Companion",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https",
+    "cleartext": true
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 1500,
+      "backgroundColor": "#090d1a",
+      "showSpinner": false
+    },
+    "PushNotifications": {
+      "presentationOptions": ["badge", "sound", "alert"]
+    },
+    "Camera": {
+      "quality": 90,
+      "allowEditing": false,
+      "resultType": "Uri",
+      "saveToGallery": true
+    },
+    "Geolocation": {
+      "enableHighAccuracy": true
+    }
+  }
+}

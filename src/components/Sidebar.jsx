@@ -9,7 +9,12 @@ import {
     Info,
     LogOut,
     Brain,
-    MessageSquare
+    MessageSquare,
+    Receipt,
+    Smartphone,
+    Bell,
+    BrainCircuit,
+    ShieldCheck
 } from 'lucide-react';
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
@@ -36,12 +41,17 @@ const NavItem = ({ icon: Icon, label, active = false, onClick }) => (
 const Sidebar = ({ activePage, setActivePage }) => {
     const menuItems = [
         { id: 'dashboard', label: 'Live Dashboard', icon: LayoutDashboard },
+        { id: 'security', label: 'Enterprise Security', icon: ShieldCheck },
+        { id: 'ai-prediction', label: 'AI Prediction', icon: BrainCircuit },
         { id: 'map', label: 'Map View', icon: MapIcon },
         { id: 'cameras', label: 'CCTV Feeds', icon: Video },
+        { id: 'echallan', label: 'E-Challan System', icon: Receipt },
+        { id: 'officer-mobile', label: 'Officer Mobile App', icon: Smartphone },
+        { id: 'notifications', label: 'Notification Center', icon: Bell },
         { id: 'emergency', label: 'Emergency Control', icon: AlertTriangle },
         { id: 'analytics', label: 'Traffic Analytics', icon: BarChart3 },
         { id: 'ai-agent', label: 'AI Intelligence', icon: Brain },
-        { id: 'ai-chatbot', label: 'Neural Chatbot', icon: MessageSquare },
+        { id: 'ai-chatbot', label: 'ITMS Chatbot', icon: MessageSquare },
     ];
 
     const bottomItems = [
